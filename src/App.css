@@ -1,0 +1,359 @@
+/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+/* --- LOGIN SCREEN --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #5568d3;
+}
+
+.error-msg {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.demo-note {
+  margin-top: 15px;
+  background: #f8f9fa;
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+  border-radius: 4px;
+}
+
+/* --- MAIN LAYOUT --- */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #34495e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #2c3e50;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-menu {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.menu-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+  color: #ecf0f1;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background: #2c3e50;
+}
+
+.menu-item.active {
+  background: #1abc9c;
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  background: #2c3e50;
+  border-top: 1px solid #34495e;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background: #3498db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.user-details h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.user-details span {
+  font-size: 11px;
+  color: #bdc3c7;
+}
+
+.btn-logout {
+  width: 100%;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ecf0f1;
+}
+
+.top-header {
+  background: white;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.content-body {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* --- COMPONENTS (Cards, Tables, Forms) --- */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Table Style */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table th {
+  background: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  color: #555;
+}
+
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table tr:hover {
+  background-color: #f1f2f6;
+}
+
+/* Buttons inside app */
+.btn-action {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+  color: white;
+}
+
+.btn-primary {
+  background: #3498db;
+}
+.btn-success {
+  background: #27ae60;
+}
+.btn-danger {
+  background: #e74c3c;
+}
+.btn-warning {
+  background: #f39c12;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+}
+
+/* Status Badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+.badge-active {
+  background: #d4edda;
+  color: #155724;
+}
+.badge-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+.badge-warning {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Dashboard Cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+.bg-blue {
+  background: #3498db;
+}
+.bg-green {
+  background: #2ecc71;
+}
+.bg-purple {
+  background: #9b59b6;
+}
+
+.stat-card h4 {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+.stat-card .number {
+  font-size: 28px;
+  font-weight: bold;
+}
